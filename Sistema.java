@@ -3,30 +3,27 @@ import java.util.*;
 
 public class Sistema
 {
-    //variável que "armazenará" os clientes
-    //é um ArrayList SOMENTE de obj "Cliente"
+    //armazena clientes
     private static ArrayList<Cliente> dados = new ArrayList<Cliente>();
     
-    //método para obter os dados do usuário,
-    //criar o objeto e adicionar ao "list"
+    //obtem dados dos clientes
     public static void cadastrarCliente() {
-        String nom, ema, tip; 
-        int ida;
-        nom = EntradaSaida.receberString("Nome:");
-        ema = EntradaSaida.receberString("E-mail:");
-        ida = EntradaSaida.receberInt("Idade:");
-        tip = EntradaSaida.receberString("C ou V");
+        String nome, email, tipo; 
+        int idade;
+        nome = EntradaSaida.receberString("Nome:");
+        email = EntradaSaida.receberString("E-mail:");
+        idade = EntradaSaida.receberInt("Idade:");
+        tipo = EntradaSaida.receberString("C ou V");
         Cliente cli;
-        if (tip.equalsIgnoreCase("V")) {
-            cli = new ClienteVip(nom, ema, ida);
+        if (tipo.equalsIgnoreCase("V")) {
+            cli = new ClienteVip(nome, email, idade);
         } else {
-            cli = new ClienteComum(nom, ema, ida);
+            cli = new ClienteComum(nome, email, idade);
         }
         dados.add(cli);
     }
     
-    //método que obtém o nome a pesquisar,
-    //procura no "list" e retorna os dados          
+    //cliente a pesquisar   
     public static void pesquisarCliente() {
         String pesq = EntradaSaida.receberString("Nome a pesquisar:");
         Cliente cli = retornarCliente(pesq);
@@ -42,8 +39,7 @@ public class Sistema
     }
     
     
-    //método que recebe uma string de pesquisa (nome)
-    //e retorna o objeto cliente vinculado com esse nome
+    //recebe a pesquisa e busca o objeto
     private static Cliente retornarCliente(String pesq) {
         Cliente cli = null;
         for (int i=0; i<dados.size(); i++) {
@@ -53,12 +49,11 @@ public class Sistema
                 return cli;
             }
         }
-        //chegou no final do loop e não retornou nada
+        
         return null;
     }
     
-    //método que aumenta o limite da conta
-    //se o cliente for "vip"
+    //aumenta limite do cliente vip
     public static void aumentarLimite() {
         String pesq = EntradaSaida.receberString("Cliente?");
         Cliente cli = retornarCliente(pesq);
