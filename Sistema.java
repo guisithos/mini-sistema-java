@@ -33,7 +33,7 @@ public class Sistema
             saida += cli.retornarEmail() + "\n";
             saida += cli.retornarIdade();
         } else {
-            saida = "Nenhum resultado encontrado";
+            saida = "Cliente não encontrado";
         }
         EntradaSaida.mostrarTexto(saida);
     }
