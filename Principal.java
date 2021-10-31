@@ -1,9 +1,4 @@
-/**
- * Classe "principal", por onde começará o sistema
- * 
- * @author (Alfamidia) 
- * @version (1.0)
- */
+
 
 public class Principal
 {
