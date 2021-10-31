@@ -1,10 +1,4 @@
-/**
- * Classe para entrada de String, int e double
- * e exibição de saída como texto
- * 
- * @author (Alfamidia) 
- * @version (1.0)
- */
+
 import javax.swing.*;
 
 public class EntradaSaida
