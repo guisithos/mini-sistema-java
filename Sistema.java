@@ -23,7 +23,7 @@ public class Sistema
         dados.add(cli);
     }
     
-    //cliente a pesquisar   
+    //pesquisa clientes   
     public static void pesquisarCliente() {
         String pesq = EntradaSaida.receberString("Nome a pesquisar:");
         Cliente cli = retornarCliente(pesq);
