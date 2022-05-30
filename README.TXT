@@ -11,6 +11,5 @@ COMO INICIAR O PROJETO:
 AUTORES: Guilherme Thomas
 
 
-Código desenvolvimento juntamente as aulas de desenvolvimento Java do projeto +PraTI. Faz parte do processo de aprendizagem 
-de OO e do uso de uma IDE, BlueJ nesse caso. 
+Código desenvolvimento juntamente as aulas de desenvolvimento Java do projeto +PraTI. Faz parte do processo de aprendizagem de OO e do uso de uma IDE, BlueJ nesse caso. 
 Aproveitei também para aprender sobre git e a plataforma github. 
